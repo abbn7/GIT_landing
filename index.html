@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitBot - التحكم في مستودعات GitHub</title>
+    <title>GitBot - إدارة مستودعات GitHub من تلجرام</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body data-theme="light">
+<body data-theme="dark">
     <div class="pbar" id="pbar"></div>
 
     <nav id="navbar">
@@ -21,9 +21,9 @@
                 <circle cx="15" cy="30" r="4" fill="white"/>
                 <circle cx="15" cy="46" r="3.5" fill="white" opacity=".75"/>
                 <circle cx="37" cy="22" r="4.5" fill="white"/>
-                <line x1="15" y1="16" x2="15" y2="26" stroke="white" stroke-width="2.5"/>
-                <line x1="15" y1="34" x2="15" y2="42.5" stroke="white" stroke-width="2.5"/>
-                <path d="M15 18 C15 22 37 22 37 22" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="15" y1="16" x2="15" y2="26" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="15" y1="34" x2="15" y2="42.5" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M15 18 C15 22 37 22 37 22" stroke="white" stroke-width="2.5" stroke-linecap="round" fill="none"/>
                 <path d="M37 13 L47 17.5 L37 22 L39.8 17.5 Z" fill="white" opacity=".92"/>
                 <defs>
                     <linearGradient id="LG2" x1="0" y1="0" x2="56" y2="56" gradientUnits="userSpaceOnUse">
@@ -35,14 +35,17 @@
             <span>GitBot</span>
         </a>
         <div class="nctr">
-            <a href="#features" class="nl">المميزات</a>
-            <a href="#how" class="nl">كيف يعمل</a>
-            <a href="#commands" class="nl">الأوامر</a>
+            <a href="#features" class="nl" id="navFeatures">المميزات</a>
+            <a href="#how" class="nl" id="navHow">كيف يعمل</a>
+            <a href="#commands" class="nl" id="navCommands">الأوامر</a>
+            <a href="#dev" class="nl" id="navDev">المطور</a>
         </div>
         <div class="nend">
-            <button id="langToggle" class="ib">EN</button>
-            <button id="themeToggle" class="ib"><i data-lucide="moon"></i></button>
-            <a href="https://t.me/finial_GIT1_bot" target="_blank" class="btn bp">ابدأ الآن</a>
+            <button id="langToggle" class="ib" style="width: 42px;">EN</button>
+            <button id="themeToggle" class="ib"><i data-lucide="sun"></i></button>
+            <a href="https://t.me/finial_GIT1_bot" target="_blank" class="btn bp" style="padding: 8px 16px; font-size: 13px;">
+                <i data-lucide="send" style="width: 13px;"></i> <span id="navBtn">افتح البوت</span>
+            </a>
         </div>
     </nav>
 
@@ -51,15 +54,23 @@
         <div class="blobs">
             <div class="bl b1"></div>
             <div class="bl b2"></div>
+            <div class="bl b3"></div>
         </div>
         <div class="hi">
             <div>
-                <div class="badge"><div class="bdot"></div><span id="heroBadge">أدر مستودعاتك</span></div>
-                <h1 class="ht" id="heroTitle">التحكم في مستودعاتك <br><span class="gt">بأمان وفورية تامة</span></h1>
-                <p class="hs" id="heroSub">بوت تلجرام SaaS احترافي للتحكم في مستودعات GitHub الخاصة بك بأوامر بسيطة وسريعة.</p>
+                <div class="badge">
+                    <div class="bdot"><i data-lucide="send" style="width: 8px; color: white;"></i></div>
+                    <span id="heroBadge">بوت GitHub على تلجرام</span>
+                </div>
+                <h1 class="ht" id="heroTitle">أدر مستودعاتك<br><span class="gt">على GitHub</span><br>من تلجرام</h1>
+                <p class="hs" id="heroSub">بوت تلجرام احترافي SaaS يتيح لك رفع وتحميل وحذف والتحكم في مستودعات GitHub — كل ذلك من محادثة واحدة، بالعربية الكاملة.</p>
                 <div class="hb">
-                    <a href="https://t.me/finial_GIT1_bot" target="_blank" class="btn bp">جرب البوت مجاناً</a>
-                    <a href="https://github.com/abbn7" target="_blank" class="btn bs"><i data-lucide="github"></i> المصدر</a>
+                    <a href="https://t.me/finial_GIT1_bot" target="_blank" class="btn bp">
+                        <i data-lucide="send" style="width: 14px;"></i> <span id="heroBtn1">افتح البوت الآن</span> <i data-lucide="arrow-right" style="width: 13px;"></i>
+                    </a>
+                    <a href="https://github.com/abbn7" target="_blank" class="btn bs">
+                        <i data-lucide="github" style="width: 14px;"></i> GitHub
+                    </a>
                 </div>
             </div>
             <div class="chside">
@@ -73,59 +84,76 @@
                                     <circle cx="15" cy="30" r="4" fill="white"/>
                                     <circle cx="15" cy="46" r="3.5" fill="white" opacity=".75"/>
                                     <circle cx="37" cy="22" r="4.5" fill="white"/>
-                                    <line x1="15" y1="16" x2="15" y2="26" stroke="white" stroke-width="2.5"/>
-                                    <line x1="15" y1="34" x2="15" y2="42.5" stroke="white" stroke-width="2.5"/>
-                                    <path d="M15 18 C15 22 37 22 37 22" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                                    <line x1="15" y1="16" x2="15" y2="26" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                                    <line x1="15" y1="34" x2="15" y2="42.5" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                                    <path d="M15 18 C15 22 37 22 37 22" stroke="white" stroke-width="2.5" stroke-linecap="round" fill="none"/>
                                     <path d="M37 13 L47 17.5 L37 22 L39.8 17.5 Z" fill="white" opacity=".92"/>
                                 </svg>
                             </div>
-                            <div class="cn">GitBot</div>
+                            <div>
+                                <div class="cn">@finial_GIT1_bot</div>
+                                <div class="cs" id="botStatus">متصل الآن</div>
+                            </div>
                         </div>
                         <div class="cb">
                             <div class="msg mu">/start</div>
-                            <div class="msg mb"><span class="mc">أهلاً! 👋</span></div>
+                            <div class="msg mb" id="msgWelcome"><span class="mc">أهلاً 👋</span><br>أرسل GitHub PAT الخاص بك للبدء 🚀</div>
                             <div class="msg mu">/repos</div>
-                            <div class="msg mb">📋 <strong>مستودعاتك:</strong><br><div class="dts"><span></span><span></span><span></span></div></div>
+                            <div class="msg mb" id="msgRepos">📋 <strong>مستودعاتك:</strong><br>• my-project<br>• portfolio-site<br>• api-backend</div>
+                            <div class="msg mb"><div class="dts"><span></span><span></span><span></span></div></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="sind" onclick="document.getElementById('features').scrollIntoView()">
-            <i data-lucide="chevron-down"></i>
+        <div class="sind" onclick="document.getElementById('features').scrollIntoView({behavior:'smooth'})">
+            <span style="font-size: 11.5px;" id="discoverText">اكتشف المزيد</span>
+            <i data-lucide="chevron-down" style="width: 15px;"></i>
         </div>
     </div>
 
     <section id="features" style="background: var(--bg2)">
         <div class="sin">
-            <div class="rv"><div class="stag">المميزات</div></div>
+            <div class="rv">
+                <div class="stag" id="stagFeatures">المميزات</div>
+                <h2 class="stitle" id="titleFeatures">كل ما تحتاجه</h2>
+                <p class="ssub" id="subFeatures">إدارة GitHub الكاملة من بوت تلجرام واحد</p>
+            </div>
             <div class="bento" id="featuresGrid">
-                <!-- Features will be injected by JS -->
+                <!-- Features injected by JS -->
             </div>
         </div>
     </section>
 
     <section id="how">
         <div class="sin">
-            <div class="rv"><div class="stag">كيف يعمل</div></div>
+            <div class="rv">
+                <div class="stag" id="stagHow">كيف يعمل</div>
+                <h2 class="stitle" id="titleHow">ابدأ في دقائق</h2>
+                <p class="ssub" id="subHow">ثلاث خطوات بسيطة وأنت جاهز</p>
+            </div>
             <div class="steps" id="stepsGrid">
-                <!-- Steps will be injected by JS -->
+                <!-- Steps injected by JS -->
             </div>
         </div>
     </section>
 
     <section id="commands" style="background: var(--bg2)">
         <div class="sin">
-            <div class="rv"><div class="stag">الأوامر</div></div>
+            <div class="rv">
+                <div class="stag" id="stagCommands">الأوامر</div>
+                <h2 class="stitle" id="titleCommands">الأوامر المتاحة</h2>
+                <p class="ssub" id="subCommands">أوامر بسيطة، نتائج قوية</p>
+            </div>
             <div class="rv-s term">
                 <div class="th">
-                    <div class="td_" style="background: #FF5F56"></div>
-                    <div class="td_" style="background: #FFBD2E"></div>
-                    <div class="td_" style="background: #27C93F"></div>
-                    <div class="tn">Terminal</div>
+                    <div class="td_" style="background: #FF5F57"></div>
+                    <div class="td_" style="background: #FEBC2E"></div>
+                    <div class="td_" style="background: #28C840"></div>
+                    <span class="tn">@finial_GIT1_bot — commands</span>
                 </div>
                 <div class="tb" id="commandsList">
-                    <!-- Commands will be injected by JS -->
+                    <!-- Commands injected by JS -->
                 </div>
             </div>
         </div>
@@ -134,16 +162,22 @@
     <section id="dev">
         <div class="sin">
             <div class="rv" style="text-align: center; margin-bottom: 40px;">
-                <div class="dwrap rv-s">
-                    <div class="dcard">
-                        <div class="dav">AN<div class="don"></div></div>
-                        <div class="dname">عبدالحامد ندا</div>
-                        <div class="drole">Software Developer</div>
-                        <p class="dbio">مطور برمجيات شغوف ببناء أدوات تسهل حياة المطورين. طور هذا البوت ليجعل إدارة المستودعات أسهل.</p>
-                        <div class="dlinks">
-                            <a href="https://www.instagram.com/abdelhamed__nada" target="_blank"><i data-lucide="instagram"></i></a>
-                            <a href="https://github.com/abbn7" target="_blank"><i data-lucide="github"></i></a>
-                        </div>
+                <div class="stag" id="stagDev">المطور</div>
+                <h2 class="stitle" id="titleDev">من طوّر البوت</h2>
+            </div>
+            <div class="dwrap rv-s">
+                <div class="dcard">
+                    <div class="dav">AN<div class="don"></div></div>
+                    <div class="dname">Abdelhamed Nada</div>
+                    <div class="drole" id="devRole">مطور برمجيات</div>
+                    <p class="dbio" id="devBio">مطور برمجيات شغوف ببناء أدوات تُبسّط سير عمل المطورين. طوّر هذا البوت ليجعل إدارة GitHub في متناول المطورين العرب في كل مكان.</p>
+                    <div class="dlinks">
+                        <a href="https://www.instagram.com/abdelhamed__nada" target="_blank" class="btn bp">
+                            <i data-lucide="instagram" style="width: 14px;"></i> <span id="instaText">إنستجرام</span>
+                        </a>
+                        <a href="https://github.com/abbn7" target="_blank" class="btn bs">
+                            <i data-lucide="github" style="width: 14px;"></i> <span id="githubText">ملف GitHub</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -153,9 +187,11 @@
     <div class="ctas">
         <div class="ctag"></div>
         <div class="rv">
-            <h2 class="ctat">مستعد للبدء؟</h2>
-            <p class="ctas_">انضم إلى المطورين الذين يديرون مستودعاتهم مباشرة من تلجرام.</p>
-            <a href="https://t.me/finial_GIT1_bot" target="_blank" class="btn bp">ابدأ الآن مجاناً</a>
+            <h2 class="ctat" id="ctaTitle">مستعد للبدء؟</h2>
+            <p class="ctas_" id="ctaSub">انضم إلى المطورين الذين يديرون مستودعاتهم مباشرة من تلجرام</p>
+            <a href="https://t.me/finial_GIT1_bot" target="_blank" class="btn bp" style="font-size: 15px; padding: 13px 28px;">
+                <i data-lucide="send" style="width: 15px;"></i> <span id="ctaBtn">افتح البوت الآن</span> <i data-lucide="arrow-right" style="width: 14px;"></i>
+            </a>
         </div>
     </div>
 
@@ -167,19 +203,19 @@
                 <circle cx="15" cy="30" r="4" fill="white"/>
                 <circle cx="15" cy="46" r="3.5" fill="white" opacity=".75"/>
                 <circle cx="37" cy="22" r="4.5" fill="white"/>
-                <line x1="15" y1="16" x2="15" y2="26" stroke="white" stroke-width="2.5"/>
-                <line x1="15" y1="34" x2="15" y2="42.5" stroke="white" stroke-width="2.5"/>
-                <path d="M15 18 C15 22 37 22 37 22" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="15" y1="16" x2="15" y2="26" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="15" y1="34" x2="15" y2="42.5" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M15 18 C15 22 37 22 37 22" stroke="white" stroke-width="2.5" stroke-linecap="round" fill="none"/>
                 <path d="M37 13 L47 17.5 L37 22 L39.8 17.5 Z" fill="white" opacity=".92"/>
             </svg>
             <span>GitBot</span>
         </div>
         <div class="flinks">
-            <a href="https://t.me/finial_GIT1_bot" target="_blank">Telegram</a>
-            <a href="https://github.com/abbn7" target="_blank">GitHub</a>
-            <a href="https://www.instagram.com/abdelhamed__nada" target="_blank">Instagram</a>
+            <a href="https://t.me/finial_GIT1_bot" target="_blank" class="flink">Telegram</a>
+            <a href="https://github.com/abbn7" target="_blank" class="flink">GitHub</a>
+            <a href="https://www.instagram.com/abdelhamed__nada" target="_blank" class="flink">Instagram</a>
         </div>
-        <p>© 2025 GitBot · صنع بـ ❤️ بواسطة Abdelhamed Nada</p>
+        <p id="footerText">© 2025 GitBot · جميع الحقوق محفوظة · صُنع بـ ❤️ بواسطة Abdelhamed Nada</p>
     </footer>
 
     <script src="script.js"></script>
