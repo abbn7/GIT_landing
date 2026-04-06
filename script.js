@@ -49,10 +49,11 @@ const TRANSLATIONS = {
         navCommands: "Commands",
         navDev: "Developer",
         navBtn: "Open Bot",
-        heroBadge: "GitHub Bot for Telegram",
-        heroTitle: "Manage Your<br><span class='gt'>GitHub Repos</span><br>From Telegram",
+        heroBadge: "Available Now • Free",
+        heroTitle: "Manage <span class='gt'>GitHub</span><br>From Telegram",
         heroSub: "A powerful SaaS Telegram bot letting you upload, download, delete and control your GitHub repositories — all in one chat, fully in Arabic.",
-        heroBtn1: "Open Bot Now",
+        heroBtn1: "Try Bot Now",
+        heroBtn2: "Discover Features",
         botStatus: "online",
         msgWelcome: "<span class='mc'>Welcome 👋</span><br>Send your GitHub PAT to begin 🚀",
         msgRepos: "📋 <strong>Your repos:</strong><br>• my-project<br>• portfolio-site<br>• api-backend",
@@ -83,10 +84,11 @@ const TRANSLATIONS = {
         navCommands: "الأوامر",
         navDev: "المطور",
         navBtn: "افتح البوت",
-        heroBadge: "بوت GitHub على تلجرام",
-        heroTitle: "أدر مستودعاتك<br><span class='gt'>على GitHub</span><br>من تلجرام",
-        heroSub: "بوت تلجرام احترافي SaaS يتيح لك رفع وتحميل وحذف والتحكم في مستودعات GitHub — كل ذلك من محادثة واحدة، بالعربية الكاملة.",
-        heroBtn1: "افتح البوت الآن",
+        heroBadge: "متاح الآن • مجاني",
+        heroTitle: "إدارة <span class='gt'>GitHub</span><br>من تلجرام",
+        heroSub: "بوت تلجرام احترافي يمنحك تحكماً كاملاً في مستودعاتك على GitHub — رفع، تحميل، حذف، وإدارة الخصوصية — بضغطة زر واحدة وبأمان تام.",
+        heroBtn1: "جرب البوت الآن",
+        heroBtn2: "اكتشف المميزات",
         botStatus: "متصل الآن",
         msgWelcome: "<span class='mc'>أهلاً 👋</span><br>أرسل GitHub PAT الخاص بك للبدء 🚀",
         msgRepos: "📋 <strong>مستودعاتك:</strong><br>• my-project<br>• portfolio-site<br>• api-backend",
@@ -135,6 +137,7 @@ function updateUI() {
     document.getElementById('heroTitle').innerHTML = t.heroTitle;
     document.getElementById('heroSub').textContent = t.heroSub;
     document.getElementById('heroBtn1').textContent = t.heroBtn1;
+    document.getElementById('heroBtn2').textContent = t.heroBtn2;
     document.getElementById('botStatus').textContent = t.botStatus;
     document.getElementById('msgWelcome').innerHTML = t.msgWelcome;
     document.getElementById('msgRepos').innerHTML = t.msgRepos;
